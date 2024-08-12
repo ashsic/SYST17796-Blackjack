@@ -13,7 +13,7 @@ class Dealer extends Person {
 
     public Dealer() {
         super("Dealer");
-        hand = new Hand();
+        this.hand = new Hand();
     }
 
     public void dealCard(Deck deck) {

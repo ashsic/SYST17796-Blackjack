@@ -15,16 +15,16 @@ public class Hand {
     private List<Card> hand;
 
     public Hand() {
-        hand = new ArrayList<>();
+        this.hand = new ArrayList<>();
     }
 
     public void addCard(Card card) {
-        hand.add(card);
+        this.hand.add(card);
     }
 
     public int getTotalValue() {
         int total = 0;
-        for (Card card : hand) {
+        for (Card card : this.hand) {
             if (card.getValue() == 11) {
                 if (total >= 11) {
                     total -= 10;
@@ -40,7 +40,7 @@ public class Hand {
     }
 
     public void clear() {
-        hand.clear();
+        this.hand.clear();
     }
 
     public List<Card> getHand() {
@@ -50,7 +50,7 @@ public class Hand {
     @Override
     public String toString() {
         String result = "";
-        for (Card card : hand) {
+        for (Card card : this.hand) {
             result += card.toString() + ", ";
         }
         return result.substring(0, result.length() - 2);

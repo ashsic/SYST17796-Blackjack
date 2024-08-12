@@ -17,7 +17,7 @@ class Deck {
     private final List<Card> cards;
 
     public Deck() {
-        cards = new ArrayList<>();
+        this.cards = new ArrayList<>();
         setDeck();
     }
 
@@ -51,19 +51,19 @@ class Deck {
 
             for (int i = 0; i < ranks.length; i++) {
                 Rank newRank = new Rank(ranks[i][0], ranks[i][1], values[i]);
-                cards.add(new Card(newSuit, newRank));
+                this.cards.add(new Card(newSuit, newRank));
             }
         }
     }
 
     // Shuffles deck.
     public void shuffle() {
-        Collections.shuffle(cards);
+        Collections.shuffle(this.cards);
     }
 
     // Deals a card
     public Card dealCard() {
-        return cards.remove(0);
+        return this.cards.remove(0);
     }
 
 }
